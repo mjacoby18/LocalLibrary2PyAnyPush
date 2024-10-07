@@ -82,8 +82,7 @@ def author_delete(request, pk):
         author.delete()
         messages.success(request, (author.first_name + ' ' +
                                    author.last_name +" has been deleted"))
-    except:
-        messages.success(request, (author.first_name + ' ' + author.last_name + ' cannot be deleted. Books exist for this author'))
+    except: messages.success(request, (author.first_name + ' ' + author.last_name + ' cannot be deleted. Books exist for this author'))
     return redirect('author_list')
 
 class AvailBooksListView(generic.ListView):
