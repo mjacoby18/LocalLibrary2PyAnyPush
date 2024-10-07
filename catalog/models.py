@@ -31,7 +31,7 @@ class Author(models.Model):
 
     def __str__(self):
         """String for representing the Model object."""
-        return '{self.last_name}, {self.first_name}'
+        return f"{self.last_name}, {self.first_name}"
 
 
 class Book(models.Model):
